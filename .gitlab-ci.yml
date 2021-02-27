@@ -1,0 +1,62 @@
+default:
+    tags: 
+        - docker
+
+variables:
+    CI_DEBUG_TRACE: "false"
+    CI_REGISTRY_USER: ${REGISTRY_USER}
+    CI_REGISTRY_PASSWORD: ${REGISTRY_PASSWORD}
+    SHARED_PATH: ${CI_PROJECT_DIR}/shared
+    IMAGE: mcr.microsoft.com/dotnet/sdk:5.0.103-alpine3.13-amd64
+    #
+    PKG1_PROJECT_NAME: "Wally.Lib.DDD.Abstractions"
+    #PKG2_PROJECT_NAME: "Wally.Lib.ServiceBus.Azure"
+    #PKG3_PROJECT_NAME: "Wally.Lib.ServiceBus.DI.Microsoft"
+
+stages:
+    - build
+    - test
+    - publish
+    - deploy
+
+build:dotnet:all:
+    extends:
+        - .build:dotnet
+
+test:dotnet:all:
+    extends:
+        - .test:dotnet
+
+publish:dotnet:pkg1:
+    extends:
+        - .publish:dotnet
+    variables:
+        PROJECT_NAME: ${PKG1_PROJECT_NAME}
+
+publish:dotnet:pkg2:
+    extends:
+        - .publish:dotnet
+    variables:
+        PROJECT_NAME: ${PKG2_PROJECT_NAME}
+
+publish:dotnet:pkg3:
+    extends:
+        - .publish:dotnet
+    variables:
+        PROJECT_NAME: ${PKG3_PROJECT_NAME}
+
+deploy:nuget:all:
+    extends:
+        - .deploy:dotnet:nuget
+
+include:
+    #- local: .gitlab/ci/docker.gitlab-ci.yml
+    - local: .gitlab/ci/dotnet.gitlab-ci.yml
+    - local: .gitlab/ci/build.gitlab-ci.yml
+    - local: .gitlab/ci/build-dotnet.gitlab-ci.yml
+    - local: .gitlab/ci/test.gitlab-ci.yml
+    - local: .gitlab/ci/test-dotnet.gitlab-ci.yml
+    - local: .gitlab/ci/publish.gitlab-ci.yml
+    - local: .gitlab/ci/publish-dotnet.gitlab-ci.yml
+    - local: .gitlab/ci/deploy.gitlab-ci.yml
+    - local: .gitlab/ci/deploy-dotnet-nuget.gitlab-ci.yml

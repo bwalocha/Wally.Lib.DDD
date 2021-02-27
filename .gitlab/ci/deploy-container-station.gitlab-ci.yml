@@ -1,0 +1,21 @@
+.deploy:container-station:
+    extends:
+        - .deploy
+    inherit:
+        default: false
+    tags:
+        - ssh
+    only:
+        - master
+        - /^release/.*$/
+    environment:
+        name: prod
+        url: "https://${CI_PROJECT_PATH_SLUG}.${DOMAIN}"
+    when: manual
+    variables:
+        GIT_STRATEGY: none
+        GIT_CHECKOUT: "false"
+    script:
+        - mkdir -p /share/Container/${CI_PROJECT_PATH_SLUG}
+        - cd /share/Container/${CI_PROJECT_PATH_SLUG}
+        - ${DOCKER_COMPOSE} down && ${DOCKER_COMPOSE} up -d

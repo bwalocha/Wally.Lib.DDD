@@ -1,0 +1,14 @@
+.deploy:dotnet:nuget:
+    extends: 
+        - .deploy
+        - .dotnet
+    only:
+        - master
+        - /^release/.*$/
+    environment:
+        name: prod
+        url: "https://${CI_PROJECT_PATH_SLUG}.${DOMAIN}"
+    when: manual
+    script:
+        - ls -al ${SHARED_PATH}/${PACKAGE_DIR}
+        - dotnet nuget push ./packages/*.nupkg --api-key ${NUGET_KEY} --source https://api.nuget.org/v3/index.json  --skip-duplicate

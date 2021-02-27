@@ -1,0 +1,28 @@
+.test:dotnet:
+    extends:
+        - .test
+        - .dotnet
+    script:
+        - dotnet tool install dotnet-reportgenerator-globaltool --version 4.8.5 --tool-path /tools
+        - dotnet test
+            ./src
+            --no-restore
+            --test-adapter-path:.
+            --logger:"junit;LogFilePath=./coverage/{framework}-{assembly}-test-result.xml;MethodFormat=Full;FailureBodyFormat=Verbose"
+            /p:CONTINUOUS_INTEGRATION=true
+            /p:CollectCoverage=true
+            /p:CoverletOutputFormat=cobertura
+            /p:CoverletOutput=./../../coverage/
+        # - /tools/reportgenerator
+            # -reports:./coverage/coverage.cobertura.xml
+            # -targetdir:./coverage/coverage/reports
+            # -reporttypes:"HTMLInline;HTMLChart"
+
+    artifacts:
+        when: always
+        expire_in: 30 days
+        paths:
+            - ./coverage/**/*
+        reports:
+            junit: 
+                - ./coverage/*-test-result.xml

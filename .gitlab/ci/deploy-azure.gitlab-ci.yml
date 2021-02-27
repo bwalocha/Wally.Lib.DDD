@@ -1,0 +1,18 @@
+.deploy:azure:
+    extends:
+        - .deploy
+    image: mcr.microsoft.com/azure-cli
+    only:
+        - master
+        - /^release/.*$/
+    environment:
+        name: prod
+        url: "https://${CI_PROJECT_PATH_SLUG}.${DOMAIN}"
+    when: manual
+    variables:
+        GIT_STRATEGY: none
+        GIT_CHECKOUT: "false"
+    script:
+        - ls -al ${SHARED_PATH}/${PACKAGE_DIR}
+        - az version
+        - az storage blob upload-batch -d "\$web" --source ${SHARED_PATH}/${PACKAGE_DIR} --account-name ${AZURE_STORAGE_ACCOUNT} --account-key ${AZURE_STORAGE_KEY}

@@ -1,0 +1,25 @@
+.test:docker:backend:
+    extends:
+        - .test
+        - .docker
+    script:
+        - docker
+            --log-level debug
+            build ./src
+            --pull
+            -f ./src/${PROJECT_NAME}/Dockerfile
+            -t ${DOCKER_IMAGE_TEST}
+            --build-arg PROJECT_NAME=${PROJECT_NAME}
+            --target test
+        - docker run
+            --rm
+            --volume ${SHARED_PATH}:/mnt/artifacts:rw
+            ${DOCKER_IMAGE_TEST}
+    artifacts:
+        when: always
+        expire_in: 30 days
+        paths:
+            - ${SHARED_PATH}/**/*
+        reports:
+            junit: 
+                - ${SHARED_PATH}/*-test-result.xml

@@ -1,0 +1,10 @@
+.build:dotnet:
+    extends:
+        - .build
+        - .dotnet
+    variables:
+        GIT_STRATEGY: recursive
+        GIT_CHECKOUT: "true"
+    script:
+        - dotnet restore ./src
+        - dotnet build ./src -c Release --no-restore

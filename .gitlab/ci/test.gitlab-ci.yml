@@ -1,0 +1,4 @@
+.test:
+    stage: test
+    variables:
+        GIT_SUBMODULE_STRATEGY: recursive

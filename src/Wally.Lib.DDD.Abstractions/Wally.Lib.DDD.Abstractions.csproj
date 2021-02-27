@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <PackageProjectUrl>https://git.wally.best/wally/wally.lib.ddd</PackageProjectUrl>
+        <RepositoryUrl>https://git.wally.best/wally/wally.lib.ddd</RepositoryUrl>
+        <PackageTags>DDD, DomainDriverDesign, CQRS</PackageTags>
+        <PackageVersion>0.0.1</PackageVersion>
+        <Title>Wally Library</Title>
+        <Authors>WALLY</Authors>
+        <RepositoryType>private</RepositoryType>
+        <PackageReleaseNotes>Initial</PackageReleaseNotes>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <AssemblyName>Wally.Lib.DDD.Abstractions</AssemblyName>
+        <RootNamespace>Wally.Lib.DDD.Abstractions</RootNamespace>
+        <PackageId>Wally.Lib.DDD.Abstractions</PackageId>
+        <Product>Wally.Lib.DDD.Abstractions</Product>
+    </PropertyGroup>
+
+</Project>

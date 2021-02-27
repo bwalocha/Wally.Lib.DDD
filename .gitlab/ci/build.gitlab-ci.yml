@@ -1,0 +1,4 @@
+.build:
+    stage: build
+    variables:
+        GIT_SUBMODULE_STRATEGY: recursive
