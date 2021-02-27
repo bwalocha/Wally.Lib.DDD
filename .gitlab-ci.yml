@@ -10,7 +10,7 @@ variables:
     IMAGE: mcr.microsoft.com/dotnet/sdk:5.0.103-alpine3.13-amd64
     #
     PKG1_PROJECT_NAME: "Wally.Lib.DDD.Abstractions"
-    #PKG2_PROJECT_NAME: "Wally.Lib.ServiceBus.Azure"
+    PKG2_PROJECT_NAME: "Wally.Lib.DDD"
     #PKG3_PROJECT_NAME: "Wally.Lib.ServiceBus.DI.Microsoft"
 
 stages:
@@ -33,17 +33,17 @@ publish:dotnet:pkg1:
     variables:
         PROJECT_NAME: ${PKG1_PROJECT_NAME}
 
-publish:dotnet:pkg2:
-    extends:
-        - .publish:dotnet
-    variables:
-        PROJECT_NAME: ${PKG2_PROJECT_NAME}
+# publish:dotnet:pkg2:
+    # extends:
+        # - .publish:dotnet
+    # variables:
+        # PROJECT_NAME: ${PKG2_PROJECT_NAME}
 
-publish:dotnet:pkg3:
-    extends:
-        - .publish:dotnet
-    variables:
-        PROJECT_NAME: ${PKG3_PROJECT_NAME}
+# publish:dotnet:pkg3:
+    # extends:
+        # - .publish:dotnet
+    # variables:
+        # PROJECT_NAME: ${PKG3_PROJECT_NAME}
 
 deploy:nuget:pkg1:
     extends:
