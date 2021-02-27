@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wally.Lib.DDD.Abstractions"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wally.Lib.DDD.Tests", "Wally.Lib.DDD.Tests\Wally.Lib.DDD.Tests.csproj", "{7AA3FB98-08E4-4BBE-9806-4880CAFE2F2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wally.Lib.DDD", "Wally.Lib.DDD\Wally.Lib.DDD.csproj", "{28AA9709-C0E4-475F-AE79-03F60963D90F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{7AA3FB98-08E4-4BBE-9806-4880CAFE2F2C}.Release|x64.Build.0 = Release|Any CPU
 		{7AA3FB98-08E4-4BBE-9806-4880CAFE2F2C}.Release|x86.ActiveCfg = Release|Any CPU
 		{7AA3FB98-08E4-4BBE-9806-4880CAFE2F2C}.Release|x86.Build.0 = Release|Any CPU
+		{28AA9709-C0E4-475F-AE79-03F60963D90F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28AA9709-C0E4-475F-AE79-03F60963D90F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28AA9709-C0E4-475F-AE79-03F60963D90F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{28AA9709-C0E4-475F-AE79-03F60963D90F}.Debug|x64.Build.0 = Debug|Any CPU
+		{28AA9709-C0E4-475F-AE79-03F60963D90F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{28AA9709-C0E4-475F-AE79-03F60963D90F}.Debug|x86.Build.0 = Debug|Any CPU
+		{28AA9709-C0E4-475F-AE79-03F60963D90F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28AA9709-C0E4-475F-AE79-03F60963D90F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28AA9709-C0E4-475F-AE79-03F60963D90F}.Release|x64.ActiveCfg = Release|Any CPU
+		{28AA9709-C0E4-475F-AE79-03F60963D90F}.Release|x64.Build.0 = Release|Any CPU
+		{28AA9709-C0E4-475F-AE79-03F60963D90F}.Release|x86.ActiveCfg = Release|Any CPU
+		{28AA9709-C0E4-475F-AE79-03F60963D90F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
