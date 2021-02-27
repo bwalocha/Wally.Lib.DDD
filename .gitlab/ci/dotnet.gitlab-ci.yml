@@ -6,4 +6,4 @@
     before_script:
         - export VERSION=0.1.${CI_PIPELINE_ID}
     after_script:
-        - ls -lR
+        - echo ${VERSION}
