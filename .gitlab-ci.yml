@@ -45,9 +45,13 @@ publish:dotnet:pkg3:
     variables:
         PROJECT_NAME: ${PKG3_PROJECT_NAME}
 
-deploy:nuget:all:
+deploy:nuget:pkg1:
     extends:
         - .deploy:dotnet:nuget
+    dependencies:
+        - publish:dotnet:pkg1
+    variables:
+        PROJECT_NAME: ${PKG1_PROJECT_NAME}
 
 include:
     #- local: .gitlab/ci/docker.gitlab-ci.yml
