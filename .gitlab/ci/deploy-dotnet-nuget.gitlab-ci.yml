@@ -10,4 +10,4 @@
         url: "https://${CI_PROJECT_PATH_SLUG}.${DOMAIN}"
     when: manual
     script:
-        - dotnet nuget push ./packages/${PROJECT_NAME}*.nupkg --api-key ${NUGET_KEY} --source https://api.nuget.org/v3/index.json  --skip-duplicate
+        - dotnet nuget push ./packages/${PROJECT_NAME}.*.nupkg --api-key ${NUGET_KEY} --source https://api.nuget.org/v3/index.json  --skip-duplicate
