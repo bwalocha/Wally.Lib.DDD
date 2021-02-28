@@ -56,8 +56,8 @@ deploy:nuget:pkg2:
 
 include:
     - project: 'wally/wally.common.pipelines'
-    ref: master
-    file: 
+      ref: master
+      file: 
         #- /src/docker.gitlab-ci.yml
         - /src/dotnet.gitlab-ci.yml
         - /src/build.gitlab-ci.yml
