@@ -2,7 +2,7 @@
 {
 	public sealed class PagedResponse<TResponse> : IResponse where TResponse : IResponse
 	{
-		public PagedResponse(TResponse[] items, PageInfo pageInfo)
+		public PagedResponse(TResponse[] items, PageInfoResponse pageInfo)
 		{
 			Items = items;
 			PageInfo = pageInfo;
@@ -10,6 +10,6 @@
 
 		public TResponse[] Items { get; }
 
-		public PageInfo PageInfo { get; }
+		public PageInfoResponse PageInfo { get; }
 	}
 }
