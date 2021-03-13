@@ -6,8 +6,6 @@ variables:
   CI_DEBUG_TRACE: "false"
   CI_REGISTRY_USER: ${REGISTRY_USER}
   CI_REGISTRY_PASSWORD: ${REGISTRY_PASSWORD}
-  SHARED_PATH: ${CI_PROJECT_DIR}/shared
-  IMAGE: mcr.microsoft.com/dotnet/sdk:5.0.103-alpine3.13-amd64
   #
   PKG1_PROJECT_NAME: "Wally.Lib.DDD.Abstractions"
   PKG2_PROJECT_NAME: "Wally.Lib.DDD"
@@ -18,39 +16,39 @@ stages:
   - publish
   - deploy
 
-build:dotnet:all:
+build:sln:
   extends:
     - .build:dotnet
 
-test:dotnet:all:
+test:sln:
   extends:
     - .test:dotnet
 
-publish:dotnet:pkg1:
+publish:pkg1:
   extends:
-    - .publish:dotnet:nuget
+    - .publish:nuget
   variables:
     PROJECT_NAME: ${PKG1_PROJECT_NAME}
 
-publish:dotnet:pkg2:
+publish:pkg2:
   extends:
-    - .publish:dotnet:nuget
+    - .publish:nuget
   variables:
     PROJECT_NAME: ${PKG2_PROJECT_NAME}
 
 deploy:nuget:pkg1:
   extends:
-    - .deploy:dotnet:nuget
+    - .deploy:nuget
   needs:
-    - publish:dotnet:pkg1
+    - publish:pkg1
   variables:
     PROJECT_NAME: ${PKG1_PROJECT_NAME}
 
 deploy:nuget:pkg2:
   extends:
-    - .deploy:dotnet:nuget
+    - .deploy:nuget
   needs:
-    - publish:dotnet:pkg2
+    - publish:pkg2
   variables:
     PROJECT_NAME: ${PKG2_PROJECT_NAME}
 
