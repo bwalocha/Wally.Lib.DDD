@@ -36,7 +36,7 @@ publish:pkg2:
   variables:
     PROJECT_NAME: ${PKG2_PROJECT_NAME}
 
-deploy:nuget:pkg1:
+deploy:pkg1:
   extends:
     - .deploy:nuget
   needs:
@@ -44,7 +44,7 @@ deploy:nuget:pkg1:
   variables:
     PROJECT_NAME: ${PKG1_PROJECT_NAME}
 
-deploy:nuget:pkg2:
+deploy:pkg2:
   extends:
     - .deploy:nuget
   needs:
