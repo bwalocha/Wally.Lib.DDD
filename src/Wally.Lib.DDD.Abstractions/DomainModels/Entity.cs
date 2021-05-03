@@ -14,7 +14,6 @@ namespace Wally.Lib.DDD.Abstractions.DomainModels
 		{
 		}
 
-		// TODO: Consider delete (moq)
 		protected Entity(Guid id)
 		{
 			Id = id;
