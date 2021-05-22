@@ -6,10 +6,11 @@ namespace Wally.Lib.DDD.Abstractions.Responses
 	public class PageInfoResponse : IResponse
 	{
 		[JsonConstructor]
-		public PageInfoResponse(int index, int size, int totalItems) : this(new PageInfoQuery(index, size), totalItems)
+		public PageInfoResponse(int index, int size, int totalItems)
+			: this(new PageInfoQuery(index, size), totalItems)
 		{
 		}
-	
+
 		public PageInfoResponse(PageInfoQuery pageInfo, int totalItems)
 		{
 			Index = pageInfo.Index;

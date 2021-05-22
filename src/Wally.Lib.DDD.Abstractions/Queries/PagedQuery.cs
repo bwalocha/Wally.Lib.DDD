@@ -8,11 +8,12 @@ namespace Wally.Lib.DDD.Abstractions.Queries
 		{
 			PageInfo = pageInfo;
 		}
-		
-		public PagedQuery(int pageIndex, int pageSize) : this(new PageInfoQuery(pageIndex, pageSize))
+
+		public PagedQuery(int pageIndex, int pageSize)
+			: this(new PageInfoQuery(pageIndex, pageSize))
 		{
 		}
-	
-		public PageInfoQuery PageInfo { get; } 
+
+		public PageInfoQuery PageInfo { get; }
 	}
 }

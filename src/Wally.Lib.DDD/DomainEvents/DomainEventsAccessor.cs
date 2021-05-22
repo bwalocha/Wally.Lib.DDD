@@ -32,9 +32,10 @@ namespace Wally.Lib.DDD.DomainEvents
 
 		private IEnumerable<Entity> GetEntities()
 		{
-			return _persistenceManager
-				.GetEntities()
-				.Where(e => e.GetDomainEvents().Any());
+			return _persistenceManager.GetEntities()
+				.Where(
+					e => e.GetDomainEvents()
+						.Any());
 		}
 	}
 }
