@@ -19,9 +19,12 @@ namespace Wally.Lib.DDD.Abstractions.DomainModels
 			Id = id;
 		}
 
-		public IReadOnlyCollection<DomainEvent> GetDomainEvents() => _domainEvents.AsReadOnly();
-
 		public virtual Guid Id { get; private set; }
+
+		public IReadOnlyCollection<DomainEvent> GetDomainEvents()
+		{
+			return _domainEvents.AsReadOnly();
+		}
 
 		protected void AddDomainEvent(DomainEvent domainEvent)
 		{

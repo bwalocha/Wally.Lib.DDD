@@ -8,7 +8,8 @@ namespace Wally.Lib.DDD.Tests
 		[Fact]
 		public void Test()
 		{
-			true.Should().BeTrue();
+			true.Should()
+				.BeTrue();
 		}
 	}
 }

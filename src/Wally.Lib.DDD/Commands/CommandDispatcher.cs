@@ -9,8 +9,8 @@ namespace Wally.Lib.DDD.Commands
 {
 	public class CommandDispatcher : ICommandDispatcher
 	{
-		private readonly IServiceProvider _serviceProvider;
 		private readonly IPersistenceManager _persistenceManager;
+		private readonly IServiceProvider _serviceProvider;
 
 		public CommandDispatcher(IServiceProvider serviceProvider, IPersistenceManager persistenceManager)
 		{

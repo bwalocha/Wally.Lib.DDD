@@ -7,8 +7,9 @@ namespace Wally.Lib.DDD.Abstractions.DomainModels
 		protected AggregateRoot()
 		{
 		}
-		
-		protected AggregateRoot(Guid id) : base(id)
+
+		protected AggregateRoot(Guid id)
+			: base(id)
 		{
 		}
 	}
