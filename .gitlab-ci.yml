@@ -1,12 +1,4 @@
-default:
-  tags: 
-    - docker
-
 variables:
-  CI_DEBUG_TRACE: "false"
-  CI_REGISTRY_USER: ${REGISTRY_USER}
-  CI_REGISTRY_PASSWORD: ${REGISTRY_PASSWORD}
-  #
   PKG1_PROJECT_NAME: "Wally.Lib.DDD.Abstractions"
   PKG2_PROJECT_NAME: "Wally.Lib.DDD"
 
@@ -16,9 +8,9 @@ stages:
   - publish
   - deploy
 
-.dotnet:
-  # https://hub.docker.com/_/microsoft-dotnet-sdk
-  image: mcr.microsoft.com/dotnet/sdk:5.0.402-alpine3.14-amd64
+# .dotnet:
+  # # https://hub.docker.com/_/microsoft-dotnet-sdk
+  # image: mcr.microsoft.com/dotnet/sdk:5.0.402-alpine3.14-amd64
 
 build:sln:
   extends:
