@@ -16,4 +16,8 @@
         <PackageReference Include="Moq" Version="4.16.1" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Wally.Lib.DDD\Wally.Lib.DDD.csproj" />
+    </ItemGroup>
+
 </Project>
