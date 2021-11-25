@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "dependencies": {
+    ".NETCoreApp,Version=v5.0": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions": {
+        "type": "Direct",
+        "requested": "[5.0.0, )",
+        "resolved": "5.0.0",
+        "contentHash": "ORj7Zh81gC69TyvmcUm9tSzytcy8AVousi+IVRAI8nLieQjOFryRusSFh7+aLk16FN9pQNqJAiMd7BTKINK0kA=="
+      },
+      "StyleCop.Analyzers": {
+        "type": "Direct",
+        "requested": "[1.1.118, )",
+        "resolved": "1.1.118",
+        "contentHash": "Onx6ovGSqXSK07n/0eM3ZusiNdB6cIlJdabQhWGgJp3Vooy9AaLS/tigeybOJAobqbtggTamoWndz72JscZBvw=="
+      },
+      "Wally.Lib.DDD.Abstractions": {
+        "type": "Direct",
+        "requested": "[0.1.917, )",
+        "resolved": "0.1.917",
+        "contentHash": "izpPfDOMjSs9qeJjhR85FSUJM7Z5Q7YUOiyFVWcwgYAytdkMPC6QYjfWmVCzfUjN/WyHil96/P26AeYJE34Psw==",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        }
+      },
+      "Wally.Lib.ServiceBus.Abstractions": {
+        "type": "Direct",
+        "requested": "[0.1.916, )",
+        "resolved": "0.1.916",
+        "contentHash": "len51Hy/Iym+vTnkyRzQFiPFVmqWAk5OpEGSbLCaekcQz5UGgAu8/HWdq3EaPqLizKFua451wMsN6SaAYmL0IQ=="
+      },
+      "Newtonsoft.Json": {
+        "type": "Transitive",
+        "resolved": "12.0.3",
+        "contentHash": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg=="
+      }
+    }
+  }
+}
