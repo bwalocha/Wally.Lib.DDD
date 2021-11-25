@@ -19,6 +19,7 @@ build:sln:
 test:sln:
   extends:
     - .test:dotnet
+  allow_failure: true
 
 publish:pkg1:
   extends:
