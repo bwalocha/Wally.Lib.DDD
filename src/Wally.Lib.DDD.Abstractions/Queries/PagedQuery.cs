@@ -14,4 +14,15 @@ namespace Wally.Lib.DDD.Abstractions.Queries
 			QueryOptions = queryOptions;
 		}
 	}
+	
+	public abstract class PagedQuery<TResult> : IQuery<PagedResponse<TResult>> 
+		where TResult : IResponse
+	{
+		public ODataQueryOptions<TResult> QueryOptions { get; }
+
+		public PagedQuery(ODataQueryOptions<TResult> queryOptions)
+		{
+			QueryOptions = queryOptions;
+		}
+	}
 }
