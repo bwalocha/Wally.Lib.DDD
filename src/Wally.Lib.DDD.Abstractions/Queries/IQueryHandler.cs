@@ -4,8 +4,8 @@ using Wally.Lib.DDD.Abstractions.Responses;
 
 namespace Wally.Lib.DDD.Abstractions.Queries
 {
-	public interface IQueryHandler<in TQuery, TResult> where TQuery : IQuery<TResult> where TResult : IResponse
+	public interface IQueryHandler<in TQuery, TResponse> where TQuery : IQuery<TResponse> where TResponse : IResponse
 	{
-		Task<TResult> HandleAsync(TQuery query, CancellationToken cancellationToken);
+		Task<TResponse> HandleAsync(TQuery query, CancellationToken cancellationToken);
 	}
 }

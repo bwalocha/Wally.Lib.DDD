@@ -1,28 +1,23 @@
-﻿using Microsoft.AspNetCore.OData.Query;
-using Wally.Lib.DDD.Abstractions.Responses;
+﻿using Wally.Lib.DDD.Abstractions.Responses;
 
 namespace Wally.Lib.DDD.Abstractions.Queries
 {
-	public abstract class PagedQuery<TResult, TOResponse> : IQuery<PagedResponse<TResult>> 
-		where TResult : IResponse
-		where TOResponse : IResponse
+	public abstract class PagedQuery<TResponse> : IQuery<PagedResponse<TResponse>> where TResponse : IResponse
 	{
-		public ODataQueryOptions<TOResponse> QueryOptions { get; }
-
-		public PagedQuery(ODataQueryOptions<TOResponse> queryOptions)
+		public PagedQuery() : this(new PageInfoQuery())
 		{
-			QueryOptions = queryOptions;
 		}
-	}
-	
-	public abstract class PagedQuery<TResult> : IQuery<PagedResponse<TResult>> 
-		where TResult : IResponse
-	{
-		public ODataQueryOptions<TResult> QueryOptions { get; }
 
-		public PagedQuery(ODataQueryOptions<TResult> queryOptions)
+		public PagedQuery(PageInfoQuery pageInfo)
 		{
-			QueryOptions = queryOptions;
+			PageInfo = pageInfo;
 		}
+
+		public PagedQuery(int pageIndex, int pageSize)
+			: this(new PageInfoQuery(pageIndex, pageSize))
+		{
+		}
+
+		public PageInfoQuery PageInfo { get; }
 	}
 }

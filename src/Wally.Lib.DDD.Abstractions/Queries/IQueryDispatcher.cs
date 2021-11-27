@@ -6,7 +6,7 @@ namespace Wally.Lib.DDD.Abstractions.Queries
 {
 	public interface IQueryDispatcher
 	{
-		Task<TResult> HandleAsync<TQuery, TResult>(TQuery query, CancellationToken cancellationToken)
-			where TQuery : IQuery<TResult> where TResult : IResponse;
+		Task<TResponse> HandleAsync<TQuery, TResponse>(TQuery query, CancellationToken cancellationToken)
+			where TQuery : IQuery<TResponse> where TResponse : IResponse;
 	}
 }
