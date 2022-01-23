@@ -1,4 +1,5 @@
 variables:
+  SLN_SOLUTION_NAME: "Wally.Lib.DDD"
   PKG1_PROJECT_NAME: "Wally.Lib.DDD.Abstractions"
   PKG2_PROJECT_NAME: "Wally.Lib.DDD"
   #
@@ -11,28 +12,33 @@ stages:
   - publish
   - deploy
 
-# .dotnet:
-  # # https://hub.docker.com/_/microsoft-dotnet-sdk
-  # image: mcr.microsoft.com/dotnet/sdk:5.0.402-alpine3.14-amd64
-
 build:sln:
   extends:
     - .build:dotnet
+  variables:
+    SOLUTION_NAME: ${SLN_SOLUTION_NAME}
 
 test:sln:
   extends:
     - .test:dotnet
-  allow_failure: true
+  needs:
+    - build:sln
+  variables:
+    SOLUTION_NAME: ${SLN_SOLUTION_NAME}
 
 publish:pkg1:
   extends:
     - .publish:nuget
+  needs:
+    - test:sln
   variables:
     PROJECT_NAME: ${PKG1_PROJECT_NAME}
 
 publish:pkg2:
   extends:
     - .publish:nuget
+  needs:
+    - test:sln
   variables:
     PROJECT_NAME: ${PKG2_PROJECT_NAME}
 
@@ -43,6 +49,9 @@ deploy:pkg1:
     - publish:pkg1
   variables:
     PROJECT_NAME: ${PKG1_PROJECT_NAME}
+  environment:
+    name: ${ENV}_${PKG1_PROJECT_NAME}
+    url: https://www.nuget.org/packages/${PKG1_PROJECT_NAME}
 
 deploy:pkg2:
   extends:
@@ -51,6 +60,9 @@ deploy:pkg2:
     - publish:pkg2
   variables:
     PROJECT_NAME: ${PKG2_PROJECT_NAME}
+  environment:
+    name: ${ENV}_${PKG2_PROJECT_NAME}
+    url: https://www.nuget.org/packages/${PKG2_PROJECT_NAME}
 
 include:
   - project: 'wally/wally.common.pipelines'

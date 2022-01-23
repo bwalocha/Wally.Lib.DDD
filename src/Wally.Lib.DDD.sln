@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wally.Lib.DDD.Abstractions", "Wally.Lib.DDD.Abstractions\Wally.Lib.DDD.Abstractions.csproj", "{25BA5DFE-FC20-46B0-8981-E3D5176A1678}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wally.Lib.DDD.Tests", "Wally.Lib.DDD.Tests\Wally.Lib.DDD.Tests.csproj", "{7AA3FB98-08E4-4BBE-9806-4880CAFE2F2C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wally.Lib.DDD.UnitTests", "Wally.Lib.DDD.UnitTests\Wally.Lib.DDD.UnitTests.csproj", "{7AA3FB98-08E4-4BBE-9806-4880CAFE2F2C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wally.Lib.DDD", "Wally.Lib.DDD\Wally.Lib.DDD.csproj", "{28AA9709-C0E4-475F-AE79-03F60963D90F}"
 EndProject

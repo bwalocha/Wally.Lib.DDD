@@ -1,7 +1,7 @@
 using FluentAssertions;
 using Xunit;
 
-namespace Wally.Lib.DDD.Tests
+namespace Wally.Lib.DDD.UnitTests
 {
 	public class UnitTest
 	{
