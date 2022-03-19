@@ -16,11 +16,12 @@
       },
       "Wally.Lib.DDD.Abstractions": {
         "type": "Direct",
-        "requested": "[1.0.1407, )",
-        "resolved": "1.0.1407",
-        "contentHash": "JG1lEBImxQSVOcF6IYmAh2lwE7JJI2KXXERtt6zlLIQen+ij1v1nXli0QilZqKI76ZHmYB5VK+OKtakJjuoytQ==",
+        "requested": "[1.0.1456, )",
+        "resolved": "1.0.1456",
+        "contentHash": "WU+kzU2Lry5KvLQOvq3aMPU3NnORiyPt01GlRfBHTK4Qd1fYReoVdT9YYD+0mbY7kQkJ1qA6/16wdFszeGs66A==",
         "dependencies": {
-          "Microsoft.AspNetCore.OData": "8.0.6",
+          "MediatR.Contracts": "1.0.1",
+          "Microsoft.AspNetCore.OData": "8.0.8",
           "Newtonsoft.Json": "13.0.1"
         }
       },
@@ -51,8 +52,8 @@
       },
       "Microsoft.AspNetCore.OData": {
         "type": "Transitive",
-        "resolved": "8.0.6",
-        "contentHash": "EjFA/hBC5tXpBRKUT+JU6g6GMs4Y3FOOvGhRifoJVcd9zYMsZGZ25HGTLKqF3YLO52tz0R/wREpV5KApSX+hqQ==",
+        "resolved": "8.0.8",
+        "contentHash": "1WfZy57Q7GRyg6lDHfr3rR1SXrx6RjoMNivK2QF1rrYldrOQ7zOuJpQzFzbm5lFkrSpj1vbzjZIXiiU+jQ0YBQ==",
         "dependencies": {
           "Microsoft.OData.Core": "[7.9.4, 8.0.0)",
           "Microsoft.OData.Edm": "[7.9.4, 8.0.0)",
