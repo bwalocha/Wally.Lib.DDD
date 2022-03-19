@@ -2,7 +2,7 @@
 
 namespace Wally.Lib.DDD.Abstractions.Queries
 {
-	public interface IQuery<TResponse> where TResponse : IResponse
+	public interface IQuery<out TResponse> : MediatR.IRequest<TResponse> where TResponse : IResponse
 	{
 	}
 }

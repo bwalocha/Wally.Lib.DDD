@@ -21,9 +21,9 @@ namespace Wally.Lib.DDD.DomainEvents
 			var domainEvenHandlerType = typeof(IDomainEventHandler<>);
 			var domainEvenHandlerTypeWithGenericType = domainEvenHandlerType.MakeGenericType(domainEvent.GetType());
 
-			foreach (dynamic service in _serviceProvider.GetServices(domainEvenHandlerTypeWithGenericType))
+			foreach (dynamic? service in _serviceProvider.GetServices(domainEvenHandlerTypeWithGenericType))
 			{
-				await service.HandleAsync((dynamic)domainEvent, cancellationToken);
+				await service!.HandleAsync((dynamic)domainEvent, cancellationToken);
 			}
 		}
 	}

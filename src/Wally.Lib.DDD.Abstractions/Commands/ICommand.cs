@@ -1,10 +1,10 @@
 ﻿namespace Wally.Lib.DDD.Abstractions.Commands
 {
-	public interface ICommand
+	public interface ICommand : MediatR.IBaseRequest
 	{
 	}
 
-	public interface ICommand<TResult> : ICommand
+	public interface ICommand<out TResult> : ICommand, MediatR.IRequest<TResult>
 	{
 	}
 }
