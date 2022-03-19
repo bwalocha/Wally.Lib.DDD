@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <PackageProjectUrl>https://git.wally.best/wally/wally.lib.ddd</PackageProjectUrl>
-        <RepositoryUrl>https://git.wally.best/wally/wally.lib.ddd</RepositoryUrl>
+        <RepositoryUrl>https://github.com/bwalocha/Wally.Lib.DDD</RepositoryUrl>
         <PackageTags>DDD, DomainDriverDesign, CQRS</PackageTags>
         <PackageVersion>0.0.1</PackageVersion>
         <Title>Wally Library</Title>
@@ -21,7 +21,7 @@
 
     <ItemGroup>
       <PackageReference Include="MediatR.Contracts" Version="1.0.1" />
-      <PackageReference Include="Microsoft.AspNetCore.OData" Version="8.0.6" />
+      <PackageReference Include="Microsoft.AspNetCore.OData" Version="8.0.8" />
       <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     </ItemGroup>
 

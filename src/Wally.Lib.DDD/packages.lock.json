@@ -26,13 +26,14 @@
       },
       "Wally.Lib.ServiceBus.Abstractions": {
         "type": "Direct",
-        "requested": "[0.3.1405, )",
-        "resolved": "0.3.1405",
-        "contentHash": "2OizW+4ltDKtwb/w4VxguvKL9rbMSb20CEE8XGwnoY1CBMUs2wUY+XKNPMd3lj0dmw7aHk+oHCbn5cNoT01jIw==",
+        "requested": "[0.3.1409, )",
+        "resolved": "0.3.1409",
+        "contentHash": "54k5J3PrrFARZamy6bGsnMWhbzBCHc046Azlc9muGJvxi02I9PA0LZRl4v2moOagv3n9fqLnRWUOkVFX5hhKUg==",
         "dependencies": {
           "MediatR": "10.0.1",
           "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
-          "Polly": "7.2.3"
+          "Polly": "7.2.3",
+          "Wally.Lib.DDD.Abstractions": "1.0.1407"
         }
       },
       "MediatR": {
