@@ -1,6 +1,5 @@
-﻿namespace Wally.Lib.DDD.Abstractions.Responses
+﻿namespace Wally.Lib.DDD.Abstractions.Responses;
+
+public interface IResponse
 {
-	public interface IResponse
-	{
-	}
 }

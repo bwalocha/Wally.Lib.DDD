@@ -1,9 +1,8 @@
-namespace Wally.Lib.DDD.Abstractions.Validators
-{
-	public interface IBusinessRule
-	{
-		string Message { get; }
+namespace Wally.Lib.DDD.Abstractions.Validators;
 
-		bool IsBroken();
-	}
+public interface IBusinessRule
+{
+	string Message { get; }
+
+	bool IsBroken();
 }

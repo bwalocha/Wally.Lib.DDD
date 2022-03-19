@@ -1,10 +1,11 @@
-﻿namespace Wally.Lib.DDD.Abstractions.Commands
-{
-	public interface ICommand : MediatR.IBaseRequest
-	{
-	}
+﻿using MediatR;
 
-	public interface ICommand<out TResult> : ICommand, MediatR.IRequest<TResult>
-	{
-	}
+namespace Wally.Lib.DDD.Abstractions.Commands;
+
+public interface ICommand : IRequest
+{
+}
+
+public interface ICommand<out TResult> : IRequest<TResult>
+{
 }

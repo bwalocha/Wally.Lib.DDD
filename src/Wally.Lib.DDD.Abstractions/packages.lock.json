@@ -2,11 +2,14 @@
   "version": 1,
   "dependencies": {
     "net6.0": {
-      "MediatR.Contracts": {
+      "MediatR": {
         "type": "Direct",
-        "requested": "[1.0.1, )",
-        "resolved": "1.0.1",
-        "contentHash": "NsRvOxthhkYml4DcBMyJsmym8C4MchioH7wxKVPEg7plFj9Euh/i4IcmZ3Gvgx6+K8obeuhPeJdoBl56wnuo3A=="
+        "requested": "[10.0.1, )",
+        "resolved": "10.0.1",
+        "contentHash": "vnjbk4giDJzJelh34Ygt0eorApCKrRFB7j0pauFPY1oxfO3cEZ7FugBrIOjCM76SDGTOmPFfbfmVnz1t3iFrGA==",
+        "dependencies": {
+          "MediatR.Contracts": "1.0.1"
+        }
       },
       "Microsoft.AspNetCore.OData": {
         "type": "Direct",
@@ -31,6 +34,11 @@
         "requested": "[1.1.118, )",
         "resolved": "1.1.118",
         "contentHash": "Onx6ovGSqXSK07n/0eM3ZusiNdB6cIlJdabQhWGgJp3Vooy9AaLS/tigeybOJAobqbtggTamoWndz72JscZBvw=="
+      },
+      "MediatR.Contracts": {
+        "type": "Transitive",
+        "resolved": "1.0.1",
+        "contentHash": "NsRvOxthhkYml4DcBMyJsmym8C4MchioH7wxKVPEg7plFj9Euh/i4IcmZ3Gvgx6+K8obeuhPeJdoBl56wnuo3A=="
       },
       "Microsoft.Bcl.AsyncInterfaces": {
         "type": "Transitive",

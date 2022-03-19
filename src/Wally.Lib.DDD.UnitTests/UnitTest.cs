@@ -1,15 +1,15 @@
 using FluentAssertions;
+
 using Xunit;
 
-namespace Wally.Lib.DDD.UnitTests
+namespace Wally.Lib.DDD.UnitTests;
+
+public class UnitTest
 {
-	public class UnitTest
+	[Fact]
+	public void Test()
 	{
-		[Fact]
-		public void Test()
-		{
-			true.Should()
-				.BeTrue();
-		}
+		true.Should()
+			.BeTrue();
 	}
 }

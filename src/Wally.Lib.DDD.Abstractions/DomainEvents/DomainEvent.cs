@@ -1,9 +1,8 @@
 ﻿using System;
 
-namespace Wally.Lib.DDD.Abstractions.DomainEvents
+namespace Wally.Lib.DDD.Abstractions.DomainEvents;
+
+public abstract class DomainEvent
 {
-	public abstract class DomainEvent
-	{
-		public DateTime OccuredOnUtc { get; } = DateTime.UtcNow;
-	}
+	public DateTime OccuredOnUtc { get; } = DateTime.UtcNow;
 }

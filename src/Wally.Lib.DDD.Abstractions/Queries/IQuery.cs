@@ -1,8 +1,9 @@
-﻿using Wally.Lib.DDD.Abstractions.Responses;
+﻿using MediatR;
 
-namespace Wally.Lib.DDD.Abstractions.Queries
+using Wally.Lib.DDD.Abstractions.Responses;
+
+namespace Wally.Lib.DDD.Abstractions.Queries;
+
+public interface IQuery<out TResponse> : IRequest<TResponse> where TResponse : IResponse
 {
-	public interface IQuery<out TResponse> : MediatR.IRequest<TResponse> where TResponse : IResponse
-	{
-	}
 }

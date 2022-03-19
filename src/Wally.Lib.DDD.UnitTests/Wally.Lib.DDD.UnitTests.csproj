@@ -8,7 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Wally.Lib.DDD\Wally.Lib.DDD.csproj" />
+        <ProjectReference Include="..\Wally.Lib.DDD\Wally.Lib.DDD.csproj"/>
     </ItemGroup>
 
 </Project>

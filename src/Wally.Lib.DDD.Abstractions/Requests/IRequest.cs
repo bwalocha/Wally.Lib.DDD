@@ -1,6 +1,5 @@
-﻿namespace Wally.Lib.DDD.Abstractions.Requests
+﻿namespace Wally.Lib.DDD.Abstractions.Requests;
+
+public interface IRequest
 {
-	public interface IRequest
-	{
-	}
 }
