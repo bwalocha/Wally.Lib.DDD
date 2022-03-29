@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 using Wally.Lib.DDD.Abstractions.DomainEvents;
 
-namespace Wally.Lib.DDD.DomainEvents;
+namespace Wally.Lib.DDD.DomainNotifications;
 
 public class DomainNotificationsDispatcher : IDomainNotificationsDispatcher
 {

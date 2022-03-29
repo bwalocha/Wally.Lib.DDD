@@ -1,7 +1,9 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Wally.Lib.DDD.Abstractions.DomainEvents;
+using Wally.Lib.DDD.Abstractions.DomainEvents;
+
+namespace Wally.Lib.DDD.Abstractions.DomainNotifications;
 
 public interface IDomainNotificationDispatcher
 {
