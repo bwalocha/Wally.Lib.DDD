@@ -104,11 +104,6 @@
         "resolved": "6.0.0",
         "contentHash": "xlzi2IYREJH3/m6+lUrQlujzX8wDitm4QGnUu6kUXTQAWPuZY8i+ticFJbzfqaetLA6KR/rO6Ew/HuYD+bxifg=="
       },
-      "Microsoft.Extensions.Logging.Abstractions": {
-        "type": "Transitive",
-        "resolved": "6.0.1",
-        "contentHash": "dzB2Cgg+JmrouhjkcQGzSFjjvpwlq353i8oBQO2GWNjCXSzhbtBRUf28HSauWe7eib3wYOdb3tItdjRwAdwCSg=="
-      },
       "Microsoft.NETCore.Platforms": {
         "type": "Transitive",
         "resolved": "1.1.0",
@@ -242,11 +237,6 @@
         "type": "Transitive",
         "resolved": "5.11.0",
         "contentHash": "eaiXkUjC4NPcquGWzAGMXjuxvLwc6XGKMptSyOGQeT0X70BUZObuybJFZLA0OfTdueLd3US23NBPTBb6iF3V1Q=="
-      },
-      "Polly": {
-        "type": "Transitive",
-        "resolved": "7.2.3",
-        "contentHash": "DeCY0OFbNdNxsjntr1gTXHJ5pKUwYzp04Er2LLeN3g6pWhffsGuKVfMBLe1lw7x76HrPkLxKEFxBlpRxS2nDEQ=="
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl": {
         "type": "Transitive",
@@ -1115,23 +1105,12 @@
       },
       "Wally.Lib.DDD.Abstractions": {
         "type": "Transitive",
-        "resolved": "1.1.0",
-        "contentHash": "j3VGhYbhBWIDxYZUPj461LVsj6iRiiVyvbkgHWUDSFxoolyAOFGXcMdP7GczV8mXDjP7/sOSkaI/HpfRYGC37A==",
+        "resolved": "1.1.2",
+        "contentHash": "aFCKX6oXb/iygLeDhVz4fiKnAR/fxk5HUva3UA0dSTWyEgH+mtnyDVAk6PHcKZguEje4N+ps5KIJxD4CO3ms5g==",
         "dependencies": {
           "MediatR": "10.0.1",
           "Microsoft.AspNetCore.OData": "8.0.8",
           "Newtonsoft.Json": "13.0.1"
-        }
-      },
-      "Wally.Lib.ServiceBus.Abstractions": {
-        "type": "Transitive",
-        "resolved": "1.1.0",
-        "contentHash": "01VdSsnkIJJnhSe7l/cUv7356HuEnDQAt/jQYrUddr6SqyBwzVY12IQI8nWJmkHPMfsHB5kGI9J+dhdick2JrQ==",
-        "dependencies": {
-          "MediatR": "10.0.1",
-          "Microsoft.Extensions.Logging.Abstractions": "6.0.1",
-          "Polly": "7.2.3",
-          "Wally.Lib.DDD.Abstractions": "1.1.0"
         }
       },
       "xunit.abstractions": {
@@ -1183,8 +1162,7 @@
         "type": "Project",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
-          "Wally.Lib.DDD.Abstractions": "1.1.0",
-          "Wally.Lib.ServiceBus.Abstractions": "1.1.0"
+          "Wally.Lib.DDD.Abstractions": "1.1.2"
         }
       }
     }
