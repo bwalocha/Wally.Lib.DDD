@@ -9,8 +9,10 @@ public abstract class CommandHandler<TCommand> : ICommandHandler<TCommand> where
 {
 	public abstract Task HandleAsync(TCommand command, CancellationToken cancellationToken);
 
-	public Task Handle(TCommand command, CancellationToken cancellationToken)
+	public async Task<Unit> Handle(TCommand command, CancellationToken cancellationToken)
 	{
-		return HandleAsync(command, cancellationToken);
+		await HandleAsync(command, cancellationToken);
+		
+		return Unit.Value;
 	}
 }
