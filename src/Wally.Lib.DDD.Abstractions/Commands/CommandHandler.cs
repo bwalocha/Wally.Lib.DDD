@@ -5,7 +5,7 @@ using MediatR;
 
 namespace Wally.Lib.DDD.Abstractions.Commands;
 
-public abstract class CommandHandler<TCommand> : ICommandHandler<TCommand> where TCommand : ICommand, IRequest
+public abstract class CommandHandler<TCommand> : ICommandHandler<TCommand> where TCommand : ICommand, IRequest<Unit>
 {
 	public abstract Task HandleAsync(TCommand command, CancellationToken cancellationToken);
 
