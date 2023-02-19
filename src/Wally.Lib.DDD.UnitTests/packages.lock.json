@@ -1107,8 +1107,8 @@
       },
       "Wally.Lib.DDD.Abstractions": {
         "type": "Transitive",
-        "resolved": "1.3.0",
-        "contentHash": "dBwaPVlDctwC56CY+8x0u1Q1aBY/Fbxk8WOlDx+mXFqTgj7F0F4l+A/VsUVXW9yUEWdCB8R7i/is7l0hVtbZMw==",
+        "resolved": "1.3.1",
+        "contentHash": "r2E2r2tMRZEkF4oEegLw49QeBtHggH9FjfljNSlrnoLiYsB4UFr/1L8difK+b3RKRa2uLdIHHbf5RIEAHD5F1A==",
         "dependencies": {
           "MediatR": "12.0.0",
           "Microsoft.AspNetCore.OData": "8.0.12",
@@ -1164,7 +1164,7 @@
         "type": "Project",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "[7.0.0, )",
-          "Wally.Lib.DDD.Abstractions": "[1.3.0, )"
+          "Wally.Lib.DDD.Abstractions": "[1.3.1, )"
         }
       }
     }
