@@ -1,7 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>disable</ImplicitUsings>
         <PackageProjectUrl>https://git.wally.best/wally/wally.lib.ddd</PackageProjectUrl>
         <RepositoryUrl>https://github.com/bwalocha/Wally.Lib.DDD</RepositoryUrl>
         <PackageTags>DDD, DomainDriverDesign, CQRS</PackageTags>
@@ -15,14 +16,13 @@
         <RootNamespace>Wally.Lib.DDD.Abstractions</RootNamespace>
         <PackageId>Wally.Lib.DDD.Abstractions</PackageId>
         <Product>Wally.Lib.DDD.Abstractions</Product>
-        <LangVersion>10</LangVersion>
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="MediatR" Version="10.0.1"/>
-        <PackageReference Include="Microsoft.AspNetCore.OData" Version="8.0.10"/>
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.1"/>
+        <PackageReference Include="MediatR" Version="12.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.OData" Version="8.0.12" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     </ItemGroup>
 
 </Project>

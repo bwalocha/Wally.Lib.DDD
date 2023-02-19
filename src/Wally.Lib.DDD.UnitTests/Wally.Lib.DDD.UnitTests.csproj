@@ -1,14 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
-        <IsPackable>false</IsPackable>
-        <LangVersion>10</LangVersion>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>disable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <IsPackable>false</IsPackable>
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Wally.Lib.DDD\Wally.Lib.DDD.csproj"/>
+        <ProjectReference Include="..\Wally.Lib.DDD\Wally.Lib.DDD.csproj" />
     </ItemGroup>
 
 </Project>

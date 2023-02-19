@@ -3,7 +3,7 @@ variables:
   PKG1_PROJECT_NAME: "Wally.Lib.DDD.Abstractions"
   PKG2_PROJECT_NAME: "Wally.Lib.DDD"
   #
-  VERSION: "1.1.${CI_PIPELINE_ID}"
+  VERSION: "1.2.${CI_PIPELINE_ID}"
   #CI_DEBUG_TRACE: "true"
 
 stages:
