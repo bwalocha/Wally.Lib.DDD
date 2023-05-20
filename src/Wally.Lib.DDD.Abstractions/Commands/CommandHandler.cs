@@ -12,7 +12,7 @@ public abstract class CommandHandler<TCommand> : ICommandHandler<TCommand> where
 	public async Task<Unit> Handle(TCommand command, CancellationToken cancellationToken)
 	{
 		await HandleAsync(command, cancellationToken);
-		
+
 		return Unit.Value;
 	}
 }

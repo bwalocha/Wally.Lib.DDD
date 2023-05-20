@@ -41,10 +41,10 @@ public abstract class Entity : IEntity<Guid>
 	protected static void CheckRule(IBusinessRule rule)
 	{
 		if (rule.IsBroken())
-		{
+
 			// TODO: 
 			// throw new DomainValidationException(rule);
-
+		{
 			throw new NotImplementedException();
 		}
 	}
